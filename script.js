@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function(){
         document.querySelector('#simple').style.opacity = 0;
         document.querySelector('#efficient').style.opacity = 0;
         document.querySelector('#effective').style.opacity = 0;
-        document.querySelector('#mail').style.opacity = 0;
     }
 
     wordsDisappear()
@@ -26,36 +25,31 @@ document.addEventListener('DOMContentLoaded', function(){
         document.querySelector('#effective').style.opacity = 1;
     }
 
-    function mailAppear(){
-        document.querySelector('#mail').style.opacity = 1;
-    }
 
 
     setInterval(simpleAppear, 500);
     setInterval(efficientAppear, 1000);
     setInterval(effectiveAppear, 1500);
-    setInterval(mailAppear, 2000);
-    setInterval(wordsDisappear, 4000);
 
     function wordsDisappear2() {
         const simpleElement = document.querySelector('#simple');
         const efficientElement = document.querySelector('#efficient');
         const effectiveElement = document.querySelector('#effective');
-        const mailElement = document.querySelector('#mail');
+
         
         simpleElement.style.opacity = 0;
         efficientElement.style.opacity = 0;
         effectiveElement.style.opacity = 0;
-        mailElement.style.opacity = 0;
+        
       
         // Remove the elements from the DOM after they've disappeared
         setTimeout(() => simpleElement.remove(), 4300); // Remove 'simple' after 1 second
         setTimeout(() => efficientElement.remove(), 4300); // Remove 'efficient' after 1 second
         setTimeout(() => effectiveElement.remove(), 4300); // Remove 'effective' after 1 second
-        setTimeout(() => mailElement.remove(), 4300); // Remove 'mail' after 1 second
+        
       }
       
-      wordsDisappear2();
+    wordsDisappear2();
 
 
     
@@ -64,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function(){
     document.querySelector('#ready').onclick = function(){
         document.querySelector('#explanation').style.opacity = 0;
         document.querySelector('.step1').style.opacity = 1;
-        document.querySelector('.step1').style.transform = 'translateY(-250px)';
+        document.querySelector('.step1').style.transform = 'translateY(-200px)';
     }
 
 
@@ -73,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function(){
     document.querySelector('#next1').onclick = function(){
         document.querySelector('.step2').style.opacity = 1;
         document.querySelector('.step1').style.opacity = 0;
-        document.querySelector('.step2').style.transform = 'translateY(-700px)';
+        document.querySelector('.step2').style.transform = 'translateY(-600px)';
     }
 
     // make step 3 visible
@@ -126,12 +120,16 @@ document.addEventListener('DOMContentLoaded', function(){
             ${firstName}`
         }
 
+
+        // Encode the letter content for the mailto link
+        const encodedLetterContent = encodeURIComponent(letter);
+
         // Find the button element by its class name
         const button = document.querySelector('.btn-success.after-form a');
 
-
         // Update the mailto link
-        button.href = `mailto:newemail@example.com?cc=otheremail@example.com&subject=New Subject&body=${letter}`;
+        button.href = `mailto:newemail@example.com?cc=otheremail@example.com&subject=New Subject&body=${encodedLetterContent}`;
+
 
 
     }
