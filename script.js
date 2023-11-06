@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function(){
             As proud Kingstonians, we also have the obligation to protect those who don’t have the voice to advocate for themselves - our environment. I implore you to consider the impact of densification on our trees, our turtles, and other wildlife and elements of the natural world who themselves do not have a voice to raise on this issue. 
             For the sake of protecting the history, character, and environment of our special city, I ask you to please consider the extent, rate, and scale at which you adopt ongoing and future densification projects in Kingston’s downtown core and surrounding areas.
             Thank you so much for your consideration.
-            Sincerely,
+            Sincerely,<br>
             ${firstName}`;
         }
 
@@ -125,6 +125,13 @@ document.addEventListener('DOMContentLoaded', function(){
             Sincerely,<br>
             ${firstName}`
         }
+
+        // Find the button element by its class name
+        const button = document.querySelector('.btn-success.after-form a');
+
+
+        // Update the mailto link
+        button.href = `mailto:newemail@example.com?cc=otheremail@example.com&subject=New Subject&body=${letter}`;
 
 
     }
