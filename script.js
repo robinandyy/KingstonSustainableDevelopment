@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function(){
             ${firstName}`
         }
 
-        console.log(letter);
+        
         const button = document.querySelector('.btn-success.after-form a');
         button.href = `mailto:newemail@example.com?cc=otheremail@example.com&subject=New Subject&body=${letter.textContent}`;
 
