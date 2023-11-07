@@ -31,25 +31,25 @@ document.addEventListener('DOMContentLoaded', function(){
     setInterval(efficientAppear, 1000);
     setInterval(effectiveAppear, 1500);
 
-    function wordsDisappear2() {
-        const simpleElement = document.querySelector('#simple');
-        const efficientElement = document.querySelector('#efficient');
-        const effectiveElement = document.querySelector('#effective');
+    // function wordsDisappear2() {
+    //     const simpleElement = document.querySelector('#simple');
+    //     const efficientElement = document.querySelector('#efficient');
+    //     const effectiveElement = document.querySelector('#effective');
 
         
-        // simpleElement.style.opacity = 0;
-        // efficientElement.style.opacity = 0;
-        // effectiveElement.style.opacity = 0;
+    //     // simpleElement.style.opacity = 0;
+    //     // efficientElement.style.opacity = 0;
+    //     // effectiveElement.style.opacity = 0;
         
       
-        // Remove the elements from the DOM after they've disappeared
-        setTimeout(() => simpleElement.remove(), 4300); // Remove 'simple' after 1 second
-        setTimeout(() => efficientElement.remove(), 4300); // Remove 'efficient' after 1 second
-        setTimeout(() => effectiveElement.remove(), 4300); // Remove 'effective' after 1 second
+    //     // Remove the elements from the DOM after they've disappeared
+    //     setTimeout(() => simpleElement.remove(), 4300); // Remove 'simple' after 1 second
+    //     setTimeout(() => efficientElement.remove(), 4300); // Remove 'efficient' after 1 second
+    //     setTimeout(() => effectiveElement.remove(), 4300); // Remove 'effective' after 1 second
         
-      }
+    //   }
       
-    wordsDisappear2();
+    // wordsDisappear2();
 
 
 
