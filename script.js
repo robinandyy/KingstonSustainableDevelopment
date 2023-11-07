@@ -123,8 +123,8 @@ document.addEventListener('DOMContentLoaded', function(){
         }
 
         
-        const button = document.querySelector('.btn-success.after-form a');
-        button.href = `mailto:newemail@example.com?cc=otheremail@example.com&subject=New Subject&body=${letter.textContent}`;
+        const button = document.querySelector('#send');
+        button.href = `mailto:bjohnson@cityofkingston.ca?bcc=robin.and26@gmail.com&subject=Densification in Kingston&body=${letter.textContent}`;
 
 
 
