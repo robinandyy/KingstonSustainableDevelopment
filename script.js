@@ -37,9 +37,9 @@ document.addEventListener('DOMContentLoaded', function(){
         const effectiveElement = document.querySelector('#effective');
 
         
-        simpleElement.style.opacity = 0;
-        efficientElement.style.opacity = 0;
-        effectiveElement.style.opacity = 0;
+        // simpleElement.style.opacity = 0;
+        // efficientElement.style.opacity = 0;
+        // effectiveElement.style.opacity = 0;
         
       
         // Remove the elements from the DOM after they've disappeared
@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', function(){
       }
       
     wordsDisappear2();
+
+
 
 
     
@@ -120,15 +122,9 @@ document.addEventListener('DOMContentLoaded', function(){
             ${firstName}`
         }
 
-
-        // Encode the letter content for the mailto link
-        const encodedLetterContent = encodeURIComponent(letter);
-
-        // Find the button element by its class name
+        console.log(letter);
         const button = document.querySelector('.btn-success.after-form a');
-
-        // Update the mailto link
-        button.href = `mailto:newemail@example.com?cc=otheremail@example.com&subject=New Subject&body=${encodedLetterContent}`;
+        button.href = `mailto:newemail@example.com?cc=otheremail@example.com&subject=New Subject&body=${letter.textContent}`;
 
 
 
