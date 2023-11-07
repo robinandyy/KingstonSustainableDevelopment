@@ -21,8 +21,8 @@ background-color:white !important;
 }
 
 .exp-container{
-    display: flex;
-    flex-wrap: wrap;
+    display: flex !important;
+    flex-wrap: wrap !important;
     gap: 20px;
 }
 
