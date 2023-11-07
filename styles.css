@@ -40,20 +40,20 @@ background-color:white !important;
 
 .flexProCons{
     display: flex;
+    flex-wrap: wrap;
     gap: 5px;
-    box-sizing: border-box;
-    width: 50%;
-    flex:1;
 }
 
 .info{
     box-sizing: border-box;
     width: 50%;
     flex:1;
+    margin: 0 20px;
 }
 
 .prosCons{
     width:50%;
+    margin: 0 20px;
 
 }
   
