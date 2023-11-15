@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
         document.querySelector('#noWork').onclick = function(){
-            alert('Oops, that\'s awkward. Depending on your browser settings, this may not work. If you aren\'t using your phone, it is strongly reccommended for best results. Otherwise, please copy paste the letter, and send it to bjohnson@cityofkingston.ca. Please consider bcc\'ing robin.and26@gmail.com as well, just so we know you participated.');
+            alert('Oops, that\'s awkward. Depending on your browser settings, this may not work until we sort this bug out. If you aren\'t using your phone, it is strongly reccommended for best results. Otherwise, please copy paste the letter, and send it to bjohnson@cityofkingston.ca. Please consider bcc\'ing robin.and26@gmail.com as well, just so we know you participated.');
         }
 
     }
