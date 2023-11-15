@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', function(){
     // hide all steps
     const elements = document.querySelectorAll('.step-container');
@@ -9,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function(){
         document.querySelector('#simple').style.opacity = 0;
         document.querySelector('#efficient').style.opacity = 0;
         document.querySelector('#effective').style.opacity = 0;
+        document.querySelector('#ready').style.opacity = 0;
+        // document.querySelector('#oops').style.opacity = 0;
     }
 
     wordsDisappear()
@@ -25,31 +29,18 @@ document.addEventListener('DOMContentLoaded', function(){
         document.querySelector('#effective').style.opacity = 1;
     }
 
+    function readyAppear(){
+        document.querySelector('#ready').style.opacity = 1;
+    }
+
 
 
     setInterval(simpleAppear, 500);
     setInterval(efficientAppear, 1000);
     setInterval(effectiveAppear, 1500);
+    setInterval(readyAppear, 2000);
 
-    // function wordsDisappear2() {
-    //     const simpleElement = document.querySelector('#simple');
-    //     const efficientElement = document.querySelector('#efficient');
-    //     const effectiveElement = document.querySelector('#effective');
 
-        
-    //     // simpleElement.style.opacity = 0;
-    //     // efficientElement.style.opacity = 0;
-    //     // effectiveElement.style.opacity = 0;
-        
-      
-    //     // Remove the elements from the DOM after they've disappeared
-    //     setTimeout(() => simpleElement.remove(), 4300); // Remove 'simple' after 1 second
-    //     setTimeout(() => efficientElement.remove(), 4300); // Remove 'efficient' after 1 second
-    //     setTimeout(() => effectiveElement.remove(), 4300); // Remove 'effective' after 1 second
-        
-    //   }
-      
-    // wordsDisappear2();
 
 
 
@@ -95,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function(){
             ${firstName}`;
         }
 
+        // if choice on drop down is two - pick letter two and insert user's name
         if(document.querySelector('#letterChoice').value === 'letter2'){
             firstName = document.querySelector('#fname').value;
             var letter = document.querySelector('#textbox');
@@ -109,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function(){
             ${firstName}`
         }
 
+        // if choice on drop down is three - pick letter three and insert user's name
         if(document.querySelector('#letterChoice').value === 'letter3'){
             firstName = document.querySelector('#fname').value;
             var letter = document.querySelector('#textbox');
@@ -122,13 +115,23 @@ document.addEventListener('DOMContentLoaded', function(){
             ${firstName}`
         }
 
-        
+        // add customized letter content including user's name to email
         const button = document.querySelector('#send');
         button.href = `mailto:bjohnson@cityofkingston.ca?bcc=robin.and26@gmail.com&subject=Densification in Kingston&body=${letter.textContent}`;
 
 
 
+        document.querySelector('#noWork').onclick = function(){
+            alert('Oops, that\'s awkward. Depending on your browser settings, this may not work. If you aren\'t using your phone, it is strongly reccommended for best results. Otherwise, please copy paste the letter, and send it to bjohnson@cityofkingston.ca. Please consider bcc\'ing robin.and26@gmail.com as well, just so we know you participated.');
+        }
+
     }
+
+
 })
+
+
+
+
 
 
